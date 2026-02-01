@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const PROFILE = {
@@ -35,7 +36,7 @@ const OUTCOMES = [
   },
 ] as const;
 
-const PROJECTS = [
+const FEATURED_PROJECTS = [
   {
     name: "COSTAATT-CRM",
     description:
@@ -51,8 +52,77 @@ const PROJECTS = [
   {
     name: "Helix-One",
     description:
-      "Real-time analytics and competitive trading arena with leaderboard, strategy insights, and exchange integration.",
+      "Real-time analytics arena with leaderboard, strategy insights, and exchange integration.",
     href: "https://github.com/ZeroZenx/Helix-One",
+  },
+] as const;
+
+const ALL_GITHUB_PROJECTS = [
+  {
+    name: "COSTAATT-CRM",
+    description:
+      "A comprehensive Recruitment CRM system for COSTAATT that streamlines student lead management from capture to enrollment.",
+    href: "https://github.com/ZeroZenx/COSTAATT-CRM",
+  },
+  {
+    name: "TAPS-Transcript-Automation",
+    description:
+      "Enterprise-grade transcript request automation with role-based workflows, Azure AD authentication, and SharePoint integration.",
+    href: "https://github.com/ZeroZenx/TAPS-Transcript-Automation",
+  },
+  {
+    name: "Helix-One",
+    description:
+      "AI-powered analytics arena with real-time leaderboard, technical analysis, and exchange integration.",
+    href: "https://github.com/ZeroZenx/Helix-One",
+  },
+  {
+    name: "COSTAATT-Techhub-Web",
+    description:
+      "Tech hub website focused on innovative learning experiences and collaborative exploration.",
+    href: "https://github.com/ZeroZenx/COSTAATT-Techhub-Web",
+  },
+  {
+    name: "COSTAATT-HR-Performance-Appreasal-System",
+    description:
+      "Performance management system (HR Performance Gateway) for 347+ staff members.",
+    href: "https://github.com/ZeroZenx/COSTAATT-HR-Performance-Appreasal-System",
+  },
+  {
+    name: "Digital-Gift-Match",
+    description:
+      "Full-stack donor/volunteer matching app with admin dashboard and automated email notifications.",
+    href: "https://github.com/ZeroZenx/Digital-Gift-Match",
+  },
+  {
+    name: "Library-Circulation-Lookup",
+    description:
+      "Read-only lookup tool for legacy Voyager circulation data with search and analytics.",
+    href: "https://github.com/ZeroZenx/Library-Circulation-Lookup",
+  },
+  {
+    name: "COSTAATT-Advanced-CMMS",
+    description:
+      "Enterprise CMMS concept: advanced work order management with modern features and extensible architecture.",
+    href: "https://github.com/ZeroZenx/COSTAATT-Advanced-CMMS",
+  },
+  {
+    name: "COSTAATT-Student-Document-Upload-System",
+    description:
+      "Student-facing web app for submitting required documents for admissions and registry processes.",
+    href: "https://github.com/ZeroZenx/COSTAATT-Student-Document-Upload-System",
+  },
+  {
+    name: "Cyberbullying-Signals-Dashboard",
+    description:
+      "Monitoring and alerting dashboard for cyberbullying signals (FortiAnalyzer and other sources) with RBAC.",
+    href: "https://github.com/ZeroZenx/Cyberbullying-Signals-Dashboard",
+  },
+  {
+    name: "Faculty-Workshop-Teaching-Learning-With-AI",
+    description:
+      "Workshop site for faculty: Teaching & Learning with AI — from critical thinking to workflow automation.",
+    href: "https://github.com/ZeroZenx/Faculty-Workshop-Teaching-Learning-With-AI",
   },
 ] as const;
 
@@ -61,16 +131,28 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-zinc-50 to-white text-zinc-900 dark:from-zinc-950 dark:to-black dark:text-zinc-50">
       <header className="mx-auto w-full max-w-5xl px-6 py-14">
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
-            <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
-              {PROFILE.location}
-            </p>
-            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-              {PROFILE.name}
-            </h1>
-            <p className="text-lg text-zinc-700 dark:text-zinc-300">
-              {PROFILE.title}
-            </p>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+            <div className="relative h-24 w-24 overflow-hidden rounded-full ring-2 ring-zinc-200 dark:ring-zinc-800 sm:h-28 sm:w-28">
+              <Image
+                src="/headshot.jpg"
+                alt="Darren Headley"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
+                {PROFILE.location}
+              </p>
+              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+                {PROFILE.name}
+              </h1>
+              <p className="text-lg text-zinc-700 dark:text-zinc-300">
+                {PROFILE.title}
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
@@ -184,8 +266,7 @@ export default function Home() {
             <div>
               <h2 className="text-xl font-semibold">Featured Projects</h2>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                Selected builds that reflect my focus on automation, reliability,
-                and practical impact.
+                A few highlighted projects. Scroll down for the full GitHub list.
               </p>
             </div>
             <Link
@@ -198,7 +279,7 @@ export default function Home() {
           </div>
 
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            {PROJECTS.map((p) => (
+            {FEATURED_PROJECTS.map((p) => (
               <a
                 key={p.name}
                 href={p.href}
@@ -214,6 +295,53 @@ export default function Home() {
                     <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                       {p.description}
                     </p>
+                  </div>
+                  <span className="text-zinc-400 transition group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
+                    →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-10 rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-xl font-semibold">Projects (GitHub)</h2>
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                Public repositories from my GitHub profile.
+              </p>
+            </div>
+            <a
+              className="text-sm font-semibold text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50"
+              href="https://github.com/ZeroZenx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View GitHub
+            </a>
+          </div>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {ALL_GITHUB_PROJECTS.map((p) => (
+              <a
+                key={p.name}
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-zinc-300 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-zinc-700"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-base font-semibold group-hover:underline">
+                      {p.name}
+                    </h3>
+                    {p.description ? (
+                      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                        {p.description}
+                      </p>
+                    ) : null}
                   </div>
                   <span className="text-zinc-400 transition group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
                     →
