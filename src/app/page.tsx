@@ -8,6 +8,7 @@ const PROFILE = {
   phoneDisplay: "+1 868 7510 325",
   phoneTel: "+18687510325",
   linkedin: "https://www.linkedin.com/in/darren-headley-2278671b5/",
+  cvHref: "/darren-headley-cv-2025.pdf",
 };
 
 const PROJECTS = [
@@ -48,7 +49,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <a
               className="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
               href={PROFILE.linkedin}
@@ -56,6 +57,15 @@ export default function Home() {
               rel="noreferrer"
             >
               View LinkedIn
+            </a>
+
+            <a
+              className="inline-flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm transition hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-50 dark:hover:bg-zinc-900"
+              href={PROFILE.cvHref}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Download CV
             </a>
 
             <a
@@ -91,22 +101,23 @@ export default function Home() {
           <h2 className="text-xl font-semibold">About</h2>
           <div className="mt-4 space-y-4 text-zinc-700 dark:text-zinc-300">
             <p>
-              Innovative and strategic IT leader with a proven track record of
-              aligning technology solutions with institutional priorities.
-              Experienced across software, hardware, systems integration, and
-              AI-driven transformation.
+              I’m a technology leader focused on modernizing service delivery
+              through secure infrastructure, workflow automation, and responsible
+              AI adoption. I lead cross-functional initiatives that connect
+              policy, people, and platforms—turning operational pain points into
+              scalable systems that improve reliability, responsiveness, and
+              decision-making.
             </p>
             <p>
-              Adept at designing and executing scalable, secure, and future-ready
-              infrastructure to support evolving digital demands, while fostering
-              cross-functional collaboration to drive digital transformation,
-              workflow automation, and operational resilience.
+              As Director of Information Technology at COSTAATT, I oversee IT
+              infrastructure, cloud integrations, and cybersecurity operations
+              (SOC, IDS, firewall), while driving digital transformation across
+              teaching, learning, and administration.
             </p>
             <p>
-              Currently leading enterprise-wide AI policy development, chatbot
-              innovation, and cybersecurity awareness initiatives at the College
-              of Science, Technology and Applied Arts of Trinidad and Tobago
-              (COSTAATT).
+              My background spans web development, database administration, and
+              IT governance—with a practical, outcomes-first approach to shipping
+              improvements.
             </p>
           </div>
         </section>
@@ -160,18 +171,45 @@ export default function Home() {
           <h2 className="text-xl font-semibold">What I work on</h2>
           <ul className="mt-4 grid gap-3 text-sm text-zinc-700 dark:text-zinc-300 sm:grid-cols-2">
             <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Enterprise AI policy, governance, and responsible adoption
+              Digital transformation: AI integration in teaching, learning, and administration
             </li>
             <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Chatbots and workflow automation for service delivery
+              Cybersecurity operations: SOC, IDS, firewall oversight and awareness programs
             </li>
             <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Secure, scalable infrastructure and systems integration
+              Cloud and infrastructure: integrations, upgrades, and service reliability
             </li>
             <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Cybersecurity awareness and operational resilience
+              Automation systems for tracking, reporting, and operational efficiency
             </li>
           </ul>
+        </section>
+
+        <section className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <h2 className="text-xl font-semibold">Education</h2>
+            <ul className="mt-4 space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
+              <li>
+                <p className="font-semibold">Masters in Artificial Intelligence</p>
+                <p className="text-zinc-600 dark:text-zinc-400">University of York • Aug 2025</p>
+              </li>
+              <li>
+                <p className="font-semibold">BSc Computer Science</p>
+                <p className="text-zinc-600 dark:text-zinc-400">University of Southampton • Aug 2003</p>
+              </li>
+            </ul>
+          </div>
+
+          <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+            <h2 className="text-xl font-semibold">Certifications</h2>
+            <ul className="mt-4 space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
+              <li>CompTIA A+</li>
+              <li>CompTIA Network+</li>
+              <li>Linux+</li>
+              <li>ITIL Foundation (v1, v3) • ITIL Service Strategy</li>
+              <li>HP ATA – Connected Devices V1</li>
+            </ul>
+          </div>
         </section>
 
         <footer className="mt-10 pb-6 text-center text-xs text-zinc-500 dark:text-zinc-500">
