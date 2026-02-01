@@ -115,7 +115,7 @@ export default function Home() {
                 src="/headshot.jpg"
                 alt="Darren Headley"
                 fill
-                className="object-cover"
+                className="object-cover object-[50%_15%] sm:object-center"
                 priority
               />
             </div>
