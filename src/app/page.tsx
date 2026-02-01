@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const PROFILE = {
   name: "Darren Headley",
@@ -33,27 +32,6 @@ const OUTCOMES = [
     title: "Automation + reporting",
     detail:
       "Building automation systems for tracking, reporting, and student engagement to reduce manual effort and improve visibility.",
-  },
-] as const;
-
-const FEATURED_PROJECTS = [
-  {
-    name: "COSTAATT-CRM",
-    description:
-      "Recruitment CRM focused on lead capture, admissions workflow visibility, and enrollment tracking.",
-    href: "https://github.com/ZeroZenx/COSTAATT-CRM",
-  },
-  {
-    name: "TAPS — Transcript Automation",
-    description:
-      "Workflow automation for transcript requests with role-based approvals, Azure AD authentication, and SharePoint integration.",
-    href: "https://github.com/ZeroZenx/TAPS-Transcript-Automation",
-  },
-  {
-    name: "Helix-One",
-    description:
-      "Real-time analytics arena with leaderboard, strategy insights, and exchange integration.",
-    href: "https://github.com/ZeroZenx/Helix-One",
   },
 ] as const;
 
@@ -265,50 +243,6 @@ export default function Home() {
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 className="text-xl font-semibold">Featured Projects</h2>
-              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                A few highlighted projects. Scroll down for the full GitHub list.
-              </p>
-            </div>
-            <Link
-              className="text-sm font-semibold text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50"
-              href={PROFILE.linkedin}
-              target="_blank"
-            >
-              Connect
-            </Link>
-          </div>
-
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            {FEATURED_PROJECTS.map((p) => (
-              <a
-                key={p.name}
-                href={p.href}
-                target="_blank"
-                rel="noreferrer"
-                className="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-zinc-300 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-950 dark:hover:border-zinc-700"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-base font-semibold group-hover:underline">
-                      {p.name}
-                    </h3>
-                    <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                      {p.description}
-                    </p>
-                  </div>
-                  <span className="text-zinc-400 transition group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
-                    →
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-10 rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <h2 className="text-xl font-semibold">Projects (GitHub)</h2>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                 Public repositories from my GitHub profile.
               </p>
