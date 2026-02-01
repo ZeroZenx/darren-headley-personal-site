@@ -2,7 +2,8 @@ import Link from "next/link";
 
 const PROFILE = {
   name: "Darren Headley",
-  title: "Director, Technology Services | AI & Digital Transformation",
+  title:
+    "Director of Information Technology Services at COSTAATT | MSc Artificial Intelligence | AI-Driven Transformation Leader | BSc Computer Science | ML | RPA | NCP-MCI | CAIE",
   location: "Trinidad & Tobago",
   email: "darren_headley@hotmail.com",
   phoneDisplay: "+1 868 7510 325",
@@ -257,14 +258,19 @@ export default function Home() {
           </div>
 
           <div className="rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-            <h2 className="text-xl font-semibold">Certifications</h2>
+            <h2 className="text-xl font-semibold">Certifications & Credentials</h2>
             <ul className="mt-4 space-y-2 text-sm text-zinc-700 dark:text-zinc-300">
+              <li>NCP-MCI</li>
+              <li>CAIE</li>
+              <li>ITIL Foundation (v1, v3) • ITIL Service Strategy</li>
               <li>CompTIA A+</li>
               <li>CompTIA Network+</li>
               <li>Linux+</li>
-              <li>ITIL Foundation (v1, v3) • ITIL Service Strategy</li>
               <li>HP ATA – Connected Devices V1</li>
             </ul>
+            <p className="mt-4 text-xs text-zinc-500 dark:text-zinc-500">
+              Also experienced with ML and RPA initiatives (see CV for details).
+            </p>
           </div>
         </section>
 
