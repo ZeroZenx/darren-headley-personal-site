@@ -4,7 +4,7 @@ const PROFILE = {
   name: "Darren Headley",
   title: "Director, Technology Services | AI & Digital Transformation",
   location: "Trinidad & Tobago",
-  email: "Darren_headey@me.com",
+  email: "darren_headley@hotmail.com",
   phoneDisplay: "+1 868 7510 325",
   phoneTel: "+18687510325",
   linkedin: "https://www.linkedin.com/in/darren-headley-2278671b5/",
