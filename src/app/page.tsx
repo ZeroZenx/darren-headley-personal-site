@@ -11,23 +11,46 @@ const PROFILE = {
   cvHref: "/darren-headley-cv-2025.pdf",
 };
 
+const OUTCOMES = [
+  {
+    title: "Digital transformation leadership",
+    detail:
+      "Leading AI integration across teaching, learning, and administrative services at COSTAATT.",
+  },
+  {
+    title: "Cybersecurity operations and resilience",
+    detail:
+      "Overseeing SOC/IDS/firewall operations, strengthening awareness, and improving operational readiness.",
+  },
+  {
+    title: "Major platform upgrades",
+    detail:
+      "Spearheaded the Moodle LMS upgrade to v4.0 and supported institution-wide training and adoption.",
+  },
+  {
+    title: "Automation + reporting",
+    detail:
+      "Building automation systems for tracking, reporting, and student engagement to reduce manual effort and improve visibility.",
+  },
+] as const;
+
 const PROJECTS = [
   {
     name: "COSTAATT-CRM",
     description:
-      "Recruitment CRM to streamline lead capture, admissions workflows, and enrollment tracking.",
+      "Recruitment CRM focused on lead capture, admissions workflow visibility, and enrollment tracking.",
     href: "https://github.com/ZeroZenx/COSTAATT-CRM",
   },
   {
-    name: "TAPS-Transcript-Automation",
+    name: "TAPS — Transcript Automation",
     description:
-      "Transcript request automation with role-based workflows, Azure AD authentication, and SharePoint integration.",
+      "Workflow automation for transcript requests with role-based approvals, Azure AD authentication, and SharePoint integration.",
     href: "https://github.com/ZeroZenx/TAPS-Transcript-Automation",
   },
   {
     name: "Helix-One",
     description:
-      "AI-powered crypto trading arena with real-time leaderboard, analytics, and Binance integration.",
+      "Real-time analytics and competitive trading arena with leaderboard, strategy insights, and exchange integration.",
     href: "https://github.com/ZeroZenx/Helix-One",
   },
 ] as const;
@@ -122,12 +145,45 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mt-10 rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <h2 className="text-xl font-semibold">Selected Outcomes</h2>
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                Highlights from recent work across transformation, operations, and delivery.
+              </p>
+            </div>
+            <a
+              className="text-sm font-semibold text-zinc-900 underline-offset-4 hover:underline dark:text-zinc-50"
+              href={PROFILE.cvHref}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Full CV
+            </a>
+          </div>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {OUTCOMES.map((o) => (
+              <div
+                key={o.title}
+                className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-zinc-950"
+              >
+                <p className="text-sm font-semibold">{o.title}</p>
+                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                  {o.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="mt-10">
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 className="text-xl font-semibold">Featured Projects</h2>
               <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                A few projects that reflect my focus on automation, reliability,
+                Selected builds that reflect my focus on automation, reliability,
                 and practical impact.
               </p>
             </div>
