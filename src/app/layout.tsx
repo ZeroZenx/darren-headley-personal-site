@@ -13,13 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://darren-headley-personal-site.vercel.app"),
   title: "Darren Headley | Technology Services",
   description:
-    "Darren Headley — Director, Technology Services | AI & Digital Transformation. Building secure, scalable systems and AI-driven solutions.",
+    "Darren Headley — Director of Information Technology Services at COSTAATT. AI-driven transformation, cybersecurity operations, and workflow automation.",
+  alternates: {
+    canonical: "https://darren-headley-personal-site.vercel.app/",
+  },
   openGraph: {
     title: "Darren Headley | Technology Services",
     description:
-      "Director, Technology Services | AI & Digital Transformation. Enterprise AI policy, chatbots, cybersecurity awareness, and automation.",
+      "Director of Information Technology Services at COSTAATT. AI-driven transformation, cybersecurity operations, and workflow automation.",
+    url: "https://darren-headley-personal-site.vercel.app/",
     type: "website",
   },
 };
