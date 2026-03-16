@@ -3,7 +3,7 @@ import Image from "next/image";
 const PROFILE = {
   name: "Darren Headley",
   title:
-    "Director of Information Technology Services at COSTAATT | MSc Artificial Intelligence | AI-Driven Transformation Leader | BSc Computer Science | ML | RPA | NCP-MCI | CAIE",
+    "Director of Information Technology Services at COSTAATT | MSc Artificial Intelligence | AI-Driven Transformation Leader | BSc Computer Science | ML | CV | RPA | NCP-MCI | CAIE | AI PM I Applied AI",
   location: "Trinidad & Tobago",
   email: "darren_headley@hotmail.com",
   phoneDisplay: "+1 868 7510 325",
