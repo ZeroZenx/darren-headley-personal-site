@@ -35,6 +35,110 @@ const OUTCOMES = [
   },
 ] as const;
 
+const EXECUTIVE_IMPACT = [
+  {
+    title: "AI and digital transformation leadership",
+    decision:
+      "Defined and introduced an institutional approach for integrating AI across teaching, learning, and administrative services at COSTAATT.",
+    action:
+      "Established strategic direction for responsible AI adoption across academic and administrative operations.",
+    outcome:
+      "Launched AI pilots supporting registry, admissions, and faculty engagement while establishing the foundation for responsible AI adoption across the institution.",
+  },
+  {
+    title: "Enterprise systems modernization",
+    decision:
+      "Prioritized modernization of critical institutional systems to support scalable digital delivery.",
+    action:
+      "Led modernization of core platforms including LMS, admissions workflows, and internal automation systems.",
+    outcome:
+      "Improved service delivery, reduced manual processing across administrative units, and strengthened institutional readiness for digital service delivery.",
+  },
+  {
+    title: "Automation of student services",
+    decision:
+      "Targeted student-facing processes for automation to improve efficiency and service quality.",
+    action:
+      "Directed development of automation platforms for student document processing, transcript workflows, and admissions support.",
+    outcome:
+      "Reduced administrative processing time while improving visibility into student application and service workflows.",
+  },
+  {
+    title: "Learning management platform transformation",
+    decision:
+      "Made LMS transformation a strategic priority for teaching and learning improvement.",
+    action:
+      "Spearheaded the upgrade of Moodle LMS to version 4.0 and supported institution-wide rollout.",
+    outcome:
+      "Enabled improved digital learning capabilities for faculty and students and strengthened adoption of modern online teaching tools.",
+  },
+  {
+    title: "Cybersecurity operations leadership",
+    decision:
+      "Elevated cybersecurity as a core institutional leadership responsibility.",
+    action:
+      "Oversaw cybersecurity operations including firewall governance, network monitoring, and security awareness initiatives.",
+    outcome:
+      "Strengthened operational readiness and improved the protection of public-facing academic systems and internal infrastructure.",
+  },
+  {
+    title: "Technology operations leadership",
+    decision:
+      "Structured multi-campus IT operations for consistency, responsiveness, and resilience.",
+    action:
+      "Directed technology operations across helpdesk services, network administration, and system administration teams.",
+    outcome:
+      "Improved service responsiveness and operational stability across institutional technology services.",
+  },
+  {
+    title: "Data visibility and reporting automation",
+    decision:
+      "Prioritized data visibility as a leadership enabler for faster institutional decisions.",
+    action:
+      "Led development of reporting and tracking systems for leadership and administrative teams.",
+    outcome:
+      "Enabled faster decision-making through improved reporting visibility and reduced manual reporting effort.",
+  },
+  {
+    title: "Cross-department transformation initiatives",
+    decision:
+      "Adopted a cross-functional delivery model to drive institutional alignment.",
+    action:
+      "Led technology initiatives involving academic leadership, student services, and administrative units.",
+    outcome:
+      "Accelerated institutional adoption of new digital systems while aligning technology strategy with institutional priorities.",
+  },
+  {
+    title: "Infrastructure and service reliability",
+    decision:
+      "Focused infrastructure strategy on reliability and resilience of critical services.",
+    action:
+      "Directed improvements to network infrastructure, system monitoring, and operational processes supporting institutional platforms.",
+    outcome:
+      "Improved service reliability and strengthened operational resilience for critical institutional services.",
+  },
+  {
+    title: "Future-focused innovation leadership",
+    decision:
+      "Positioned innovation as a deliberate, structured institutional capability.",
+    action:
+      "Championed AI experimentation, workflow automation, and technology pilots supporting institutional transformation.",
+    outcome:
+      "Positioned the institution to adopt emerging technologies in a structured and responsible manner.",
+  },
+] as const;
+
+const STRATEGIC_INITIATIVES = [
+  "AI adoption strategy for academic and administrative operations",
+  "AI inbox automation for institutional email workflows",
+  "Student document automation platform",
+  "Transcript automation workflow system",
+  "Recruitment CRM for admissions pipeline management",
+  "Cyberbullying monitoring dashboard integrated with security platforms",
+  "Institutional LMS modernization program",
+  "Internal reporting and automation systems for operational visibility",
+] as const;
+
 const ALL_GITHUB_PROJECTS = [
   {
     name: "COSTAATT-CRM",
@@ -239,6 +343,65 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mt-10 rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="text-xl font-semibold">What I work on</h2>
+          <ul className="mt-4 grid gap-3 text-sm text-zinc-700 dark:text-zinc-300 sm:grid-cols-2">
+            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
+              Digital transformation: AI integration in teaching, learning, and administration
+            </li>
+            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
+              Cybersecurity operations: SOC, IDS, firewall oversight and awareness programs
+            </li>
+            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
+              Cloud and infrastructure: integrations, upgrades, and service reliability
+            </li>
+            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
+              Automation systems for tracking, reporting, and operational efficiency
+            </li>
+          </ul>
+        </section>
+
+        <section className="mt-10 rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
+          <h2 className="text-xl font-semibold">Executive Leadership and Business Impact</h2>
+          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+            Leadership decisions translated into strategic direction and institutional outcomes.
+          </p>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            {EXECUTIVE_IMPACT.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800"
+              >
+                <h3 className="text-base font-semibold">{item.title}</h3>
+                <div className="mt-3 space-y-3 text-sm text-zinc-700 dark:text-zinc-300">
+                  <p>
+                    <span className="font-semibold">Leadership decision:</span> {item.decision}
+                  </p>
+                  <p>
+                    <span className="font-semibold">Strategic action:</span> {item.action}
+                  </p>
+                  <p>
+                    <span className="font-semibold">Outcome:</span> {item.outcome}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 rounded-2xl border border-zinc-200 p-5 dark:border-zinc-800">
+            <h3 className="text-base font-semibold">Strategic Initiatives Led</h3>
+            <ul className="mt-3 grid gap-2 text-sm text-zinc-700 dark:text-zinc-300 sm:grid-cols-2">
+              {STRATEGIC_INITIATIVES.map((initiative) => (
+                <li key={initiative} className="flex gap-2">
+                  <span aria-hidden="true">•</span>
+                  <span>{initiative}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         <section className="mt-10">
           <div className="flex items-end justify-between gap-4">
             <div>
@@ -284,24 +447,6 @@ export default function Home() {
               </a>
             ))}
           </div>
-        </section>
-
-        <section className="mt-10 rounded-3xl border border-zinc-200 bg-white p-7 shadow-sm dark:border-zinc-800 dark:bg-zinc-950">
-          <h2 className="text-xl font-semibold">What I work on</h2>
-          <ul className="mt-4 grid gap-3 text-sm text-zinc-700 dark:text-zinc-300 sm:grid-cols-2">
-            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Digital transformation: AI integration in teaching, learning, and administration
-            </li>
-            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Cybersecurity operations: SOC, IDS, firewall oversight and awareness programs
-            </li>
-            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Cloud and infrastructure: integrations, upgrades, and service reliability
-            </li>
-            <li className="rounded-2xl border border-zinc-200 p-4 dark:border-zinc-800">
-              Automation systems for tracking, reporting, and operational efficiency
-            </li>
-          </ul>
         </section>
 
         <section className="mt-10 grid gap-4 sm:grid-cols-2">
