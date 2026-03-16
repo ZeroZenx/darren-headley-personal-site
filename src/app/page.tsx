@@ -66,9 +66,9 @@ const EXECUTIVE_IMPACT = [
   {
     title: "Learning management platform transformation",
     decision:
-      "Made LMS transformation a strategic priority for teaching and learning improvement.",
+      "Supported LMS transformation priorities to strengthen teaching and learning outcomes.",
     action:
-      "Spearheaded the upgrade of Moodle LMS to version 4.0 and supported institution-wide rollout.",
+      "Supported the Moodle LMS upgrade to version 4.0 and institution-wide rollout.",
     outcome:
       "Enabled improved digital learning capabilities for faculty and students and strengthened adoption of modern online teaching tools.",
   },
