@@ -14,16 +14,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://darren-headley-personal-site.vercel.app"),
-  title: "Darren Headley | Technology Services",
+  title: "Darren Richard Kern Headley | Executive Technology Leadership",
   description:
-    "Darren Headley — Director of Information Technology Services at COSTAATT. AI-driven transformation, cybersecurity operations, and workflow automation.",
+    "Director of Information Technology and Digital Transformation. Executive leadership in enterprise IT operations, AI adoption, cybersecurity governance, and institutional modernization.",
   alternates: {
     canonical: "https://darren-headley-personal-site.vercel.app/",
   },
   openGraph: {
-    title: "Darren Headley | Technology Services",
+    title: "Darren Richard Kern Headley | Executive Technology Leadership",
     description:
-      "Director of Information Technology Services at COSTAATT. AI-driven transformation, cybersecurity operations, and workflow automation.",
+      "Director of Information Technology and Digital Transformation with 20+ years of enterprise technology leadership experience.",
     url: "https://darren-headley-personal-site.vercel.app/",
     type: "website",
   },

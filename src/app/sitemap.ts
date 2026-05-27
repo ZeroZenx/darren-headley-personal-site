@@ -11,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/darren-headley-cv-2025.pdf`,
+      url: `${baseUrl}/darren-richard-kern-headley-executive-cv-2026.pdf`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.3,
