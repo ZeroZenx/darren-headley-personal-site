@@ -1,31 +1,44 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://darren-headley-personal-site.vercel.app"),
-  title: "Darren Richard Kern Headley | Executive Technology Leadership",
+  title: "Darren Headley | AI & Digital Transformation Executive",
   description:
-    "Director of Information Technology and Digital Transformation. Executive leadership in enterprise IT operations, AI adoption, cybersecurity governance, and institutional modernization.",
+    "Executive AI, cybersecurity, and digital transformation leader driving enterprise technology strategy, operational modernization, and innovation at institutional scale.",
+  keywords: [
+    "Darren Headley",
+    "AI executive",
+    "digital transformation executive",
+    "cybersecurity governance",
+    "enterprise technology strategy",
+    "CIO leadership",
+    "Trinidad and Tobago technology leader",
+  ],
   alternates: {
     canonical: "https://darren-headley-personal-site.vercel.app/",
   },
   openGraph: {
-    title: "Darren Richard Kern Headley | Executive Technology Leadership",
+    title: "Darren Headley | AI & Digital Transformation Executive",
     description:
-      "Director of Information Technology and Digital Transformation with 20+ years of enterprise technology leadership experience.",
+      "AI, cybersecurity, and enterprise modernization leadership with 20+ years of technology transformation experience.",
     url: "https://darren-headley-personal-site.vercel.app/",
     type: "website",
+    images: [
+      {
+        url: "https://darren-headley-personal-site.vercel.app/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Darren Headley - AI and Digital Transformation Executive",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Darren Headley | AI & Digital Transformation Executive",
+    description:
+      "Executive AI, cybersecurity, and digital transformation leadership for enterprise modernization.",
+    images: ["https://darren-headley-personal-site.vercel.app/opengraph-image"],
   },
 };
 
@@ -36,11 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
