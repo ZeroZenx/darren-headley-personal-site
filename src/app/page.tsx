@@ -16,7 +16,7 @@ const PROFESSIONAL_PROFILE = [
   "Strategic technology executive with more than 20 years of experience leading enterprise IT operations, cybersecurity governance, artificial intelligence initiatives, infrastructure modernization, digital transformation, and institutional technology strategy.",
   "Experienced in aligning technology operations with organizational objectives through innovation, operational leadership, AI adoption, enterprise systems management, process automation, and service delivery transformation.",
   "Proven track record leading multi-campus technology environments, enterprise modernization initiatives, disaster recovery programs, cybersecurity operations, AI-enabled services, and operational transformation projects within higher education and enterprise environments.",
-  "Recognized for executive leadership, stakeholder engagement, operational resilience, AI transformation initiatives, infrastructure governance, and technology strategy development.",
+  "Recognized for executive leadership, stakeholder engagement, operational resilience, AI transformation initiatives, infrastructure governance, and technology strategy development, including serving as architect behind COSTAATT's AI Connect project that won the IDB President's Award for Service Excellence and Innovation (Pr.A.I.S.E.) 2024 Innovation Category (December 2024).",
 ] as const;
 
 const CORE_COMPETENCIES = [
@@ -48,6 +48,7 @@ const KEY_RESPONSIBILITIES_AND_ACHIEVEMENTS = [
   "Oversee technology teams responsible for systems administration, network operations, cybersecurity, infrastructure support, enterprise applications, and help desk operations.",
   "Lead institutional digital transformation initiatives focused on operational modernization, automation, AI adoption, and service optimization.",
   "Spearheaded implementation of AI-enabled operational services including chatbot technologies, automated communication systems, workflow automation, and AI-assisted administrative solutions.",
+  "Served as architect behind COSTAATT's AI Connect project, which won the IDB President's Award for Service Excellence and Innovation (Pr.A.I.S.E.) 2024 Innovation Category in December 2024.",
   "Directed enterprise infrastructure modernization initiatives involving virtualization platforms, cybersecurity systems, wireless infrastructure, VoIP platforms, cloud services, and disaster recovery solutions.",
   "Managed enterprise cybersecurity operations including infrastructure hardening, incident response coordination, identity management initiatives, access governance, and operational security improvements.",
   "Directed disaster recovery and business continuity initiatives involving enterprise backup modernization, replication environments, recovery planning, and operational resilience programs.",
@@ -63,6 +64,7 @@ const KEY_RESPONSIBILITIES_AND_ACHIEVEMENTS = [
 ] as const;
 
 const AI_AND_DIGITAL_TRANSFORMATION = [
+  "Architected COSTAATT's AI Connect project, recognized with the IDB President's Award for Service Excellence and Innovation (Pr.A.I.S.E.) 2024 Innovation Category.",
   "Led institutional AI adoption initiatives supporting operational efficiency and service modernization.",
   "Directed implementation of AI-assisted communication and workflow automation systems.",
   "Designed AI-enabled operational strategies for higher education administration and student engagement.",
