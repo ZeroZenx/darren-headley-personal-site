@@ -190,7 +190,7 @@ export default function Home() {
                 src="/headshot.jpg"
                 alt="Darren Richard Kern Headley"
                 fill
-                className="object-cover object-[50%_15%] sm:object-center"
+                className="object-cover object-[50%_8%]"
                 priority
               />
             </div>
