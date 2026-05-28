@@ -10,13 +10,13 @@ const PROFILE = {
   phoneDisplay: "751-0325",
   phoneTel: "+18687510325",
   linkedin: "https://www.linkedin.com/in/darren-headley-2278671b5/",
-  website: "https://darren-headley-personal-site.vercel.app",
+  website: "https://darrenheadley.vercel.app",
   cvHref: "/darren-richard-kern-headley-executive-cv-2026.pdf",
 };
 
-const ADVISORY_MAILTO = `mailto:${PROFILE.email}?subject=${encodeURIComponent(
-  "Speaking and Advisory Inquiry",
-)}&body=${encodeURIComponent(
+const ADVISORY_OUTLOOK_URL = `https://outlook.live.com/mail/0/deeplink/compose?to=${encodeURIComponent(
+  PROFILE.email,
+)}&subject=${encodeURIComponent("Speaking and Advisory Inquiry")}&body=${encodeURIComponent(
   "Hello Darren,\n\nI would like to connect about a speaking, advisory, or executive technology opportunity.\n\nRegards,",
 )}`;
 
@@ -243,9 +243,11 @@ export default function Home() {
               </a>
               <a
                 className="inline-flex items-center justify-center border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:border-[#d6ae5f] hover:text-[#f4d998]"
-                href={ADVISORY_MAILTO}
+                href={ADVISORY_OUTLOOK_URL}
+                target="_blank"
+                rel="noreferrer"
               >
-                Contact for Speaking & Advisory
+                Email for Speaking & Advisory
               </a>
             </div>
           </div>
